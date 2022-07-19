@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:ital,wght@1,300&family=Roboto:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    box-sizing: border-box;
+}
+nav img{
+    padding: 35px;
+    width: 150px;
+}
+nav{
+    background-color: royalblue;
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    /* margin-right: 20px; */
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 30px;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24x;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a:active, a:hover{
+    color: darkblue;
+    background: rgb(132, 136, 235);
+    transition: 1s;
+
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.slider{
+    margin:10px auto;
+    width: 90vw;
+    overflow: hidden;
+}
+.card{
+    max-width:91vw;
+    margin: auto;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: hidden;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+.card-item{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px 15px;
+}
+.card h2{
+    font-family: 'Roboto', sans-serif;
+}
+.flex-all-centers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    color: rgb(34, 34, 250);
+    padding: 8px 30px;
+    font-weight: bold;
+}
+.my-1{
+    margin: 5px 0;
+}
+.my-2{
+    margin: auto;
+    border: 1px solid rgb(210, 210, 210);
+    padding: 10px;
+}
+.text-center{
+    text-align: center;
+}
+.text-center2{
+    text-align: center;
+    color: green;
+}
+footer{
+    height: 10vh;
+    background-color: rgb(29, 6, 103);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+@media (max-width: 900px) {
+    nav img{
+        padding-top: 30px;
+        width: 250px;
+        padding-left: 60px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:899px){
+    nav img{
+        width: 150px;
+        padding-left: 70px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        height: 100vh;
+        background-color: rgb(60, 91, 185);
+        top: 80px;
+        left:-130px;
+        transition: all .2s;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a:active{
+        background: none;
+        color: darkblue;
+    }
+    #check:checked ~ ul{
+        left:0;
+        width: 100%;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card-item{
+        flex-direction: row;
+    }
+}
